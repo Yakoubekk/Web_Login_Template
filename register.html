@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UZASNA STRANKA</title>
+    <script>
+        function varovani(){
+            alert("DO FORMULÁŘU OD TÉTO STRÁNKY NIKDY NEVKLÁDEJTE SVÉ PRAVÉ ÚDAJE, ZABEZPEČENÍ TÉTO STRÁNKY JE NA BODU MRAZU")
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('bcg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .loginokno {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999; 
+        }
+
+        .loginokno h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .loginokno input[type="text"],
+        .loginokno input[type="email"],
+        .loginokno input[type="password"],
+        .loginokno input[type="submit"],
+        .loginokno input[type="button"] { 
+            width: calc(100% - 40px);
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .loginokno input[type="submit"],
+        .loginokno input[type="button"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .loginokno input[type="submit"]:hover,
+        .loginokno input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="loginokno">
+        <h1>ZADEJTE ÚDAJE PRO REGISTRACI</h1>
+        <form action="vytvoreni.php" method="post">
+            <input type="text" name="jmeno" placeholder="Jmeno">
+            <input type="email" name="email" placeholder="E-Mail">
+            <input type="password" name="heslo" placeholder="Heslo">
+            <input type="submit" value="Potvrdit registraci">
+        </form>
+        <a href="http://uzasnastranka.unas.cz/leak.php"><input type="button" value="ODHALENÍ"></a>
+    </div>
+</body>
+</html>
