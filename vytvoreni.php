@@ -34,5 +34,6 @@ try {
     echo 'Chyba: ' . $e->getMessage();
     header("Location: register.html");
 }
+
 ?>
 ?>
